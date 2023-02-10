@@ -5,41 +5,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="62f2e9ea-129e-4539-85a1-1ebf67452e4f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/aws.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Customer/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Customer/src/main/java/com/marri/customer/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Customer/src/main/java/com/marri/customer/CustomerApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Customer/src/main/java/com/marri/customer/CustomerConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Customer/src/main/java/com/marri/customer/CustomerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Customer/src/main/java/com/marri/customer/CustomerRegisterRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Customer/src/main/java/com/marri/customer/CustomerRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Customer/src/main/java/com/marri/customer/CustomerServices.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Customer/src/main/java/com/marri/customer/FraudCheckResponce.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Customer/src/main/resources/application.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Customer/src/main/resources/banner.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Eureka-Server/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Eureka-Server/src/main/java/com/marri/eurekaserver/EurekaServerApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Eureka-Server/src/main/resources/application.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Eureka-Server/src/main/resources/banner.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fraud/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fraud/src/main/java/com/marri/fraud/FraudApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fraud/src/main/java/com/marri/fraud/FraudCheckHistory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fraud/src/main/java/com/marri/fraud/FraudCheckResponce.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fraud/src/main/java/com/marri/fraud/FraudController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fraud/src/main/java/com/marri/fraud/FraudRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fraud/src/main/java/com/marri/fraud/FraudServices.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fraud/src/main/resources/application.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fraud/src/main/resources/banner.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Customer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Customer/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Customer/src/main/java/com/marri/customer/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Customer/src/main/java/com/marri/customer/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Customer/target/classes/application.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Customer/target/classes/banner.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Customer/target/classes/com/marri/customer/Customer$CustomerBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Customer/target/classes/com/marri/customer/Customer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Customer/target/classes/com/marri/customer/CustomerApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Customer/target/classes/com/marri/customer/CustomerController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Customer/target/classes/com/marri/customer/CustomerRegisterRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Customer/target/classes/com/marri/customer/CustomerRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Customer/target/classes/com/marri/customer/CustomerServices.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eureka-Server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Eureka-Server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eureka-Server/target/classes/application.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eureka-Server/target/classes/banner.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eureka-Server/target/classes/com/marri/eurekaserver/EurekaServerApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fraud/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Fraud/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fraud/src/main/java/com/marri/fraud/FraudCheckHistory.java" beforeDir="false" afterPath="$PROJECT_DIR$/Fraud/src/main/java/com/marri/fraud/FraudCheckHistory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fraud/target/classes/application.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fraud/target/classes/banner.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fraud/target/classes/com/marri/fraud/FraudApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fraud/target/classes/com/marri/fraud/FraudCheckHistory$FraudCheckHistoryBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fraud/target/classes/com/marri/fraud/FraudCheckHistory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fraud/target/classes/com/marri/fraud/FraudCheckResponce.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fraud/target/classes/com/marri/fraud/FraudController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fraud/target/classes/com/marri/fraud/FraudRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fraud/target/classes/com/marri/fraud/FraudServices.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,29 +59,37 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="ProjectId" id="2LI76NvsVvCPKi935vc5HuNfEqw" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "19",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;19&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;d8594942368bd6f4b5909e84cbda9e77&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.marri.customer" />
@@ -99,7 +102,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.FraudApplication">
+  <component name="RunManager" selected="Spring Boot.CustomerApplication">
     <configuration name="CustomerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="Customer" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.marri.customer.CustomerApplication" />
@@ -139,11 +142,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="docker-compose.yaml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="docker-compose.yaml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.FraudApplication" />
-        <item itemvalue="Spring Boot.EurekaServerApplication" />
         <item itemvalue="Spring Boot.CustomerApplication" />
+        <item itemvalue="Spring Boot.FraudApplication" />
+        <item itemvalue="Docker.docker-compose.yaml: Compose Deployment" />
+        <item itemvalue="Spring Boot.EurekaServerApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -156,10 +168,19 @@
       <option name="presentableId" value="Default" />
       <updated>1675546572910</updated>
       <workItem from="1675546575289" duration="10176000" />
+      <workItem from="1675941695167" duration="433000" />
+      <workItem from="1676046540528" duration="2811000" />
+      <workItem from="1676052248942" duration="792000" />
+      <workItem from="1676053132424" duration="1890000" />
+      <workItem from="1676055992108" duration="4232000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

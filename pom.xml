@@ -15,12 +15,12 @@
     </modules>
 
     <properties>
-        <maven.compiler.source>19</maven.compiler.source>
-        <maven.compiler.target>19</maven.compiler.target>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <spring-boot-maven-plugin-version>3.0.0</spring-boot-maven-plugin-version>
+        <spring-boot-maven-plugin-version>2.7.5</spring-boot-maven-plugin-version>
         <spring-cloud-dependency-version>2020.0.6</spring-cloud-dependency-version>
-        <spring-boot-dependency-version>3.0.0</spring-boot-dependency-version>
+        <spring-boot-dependency-version>2.7.5</spring-boot-dependency-version>
     </properties>
 
     <dependencyManagement>
@@ -44,11 +44,11 @@
     </dependencyManagement>
 
     <dependencies>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
         </dependency>
-
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
