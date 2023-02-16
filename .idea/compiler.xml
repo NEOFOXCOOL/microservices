@@ -7,9 +7,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Customer" />
         <module name="Eureka-Server" />
         <module name="Fraud" />
+        <module name="Client" />
+        <module name="Customer" />
       </profile>
     </annotationProcessing>
   </component>

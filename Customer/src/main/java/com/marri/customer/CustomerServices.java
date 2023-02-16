@@ -20,11 +20,11 @@ public class CustomerServices {
                 .email(request.email())
                 .build();
         if(customerRepository.findCustomerByEmail(request.email()).isEmpty()){
-           customerRepository.saveAndFlush(customer);
+          customerRepository.saveAndFlush(customer);
         }
 
         FraudCheckResponce fraudCheckResponce = restTemplate.getForObject(
-                "http://localhost:8081/api/v1/fraud-check/{customerid}",
+                "http://FRAUD/api/v1/fraud-check/{customerid}",
                 FraudCheckResponce.class,
                 customer.getId()
         );
