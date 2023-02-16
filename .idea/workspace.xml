@@ -4,19 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="62f2e9ea-129e-4539-85a1-1ebf67452e4f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Client/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/src/main/java/com/marri/client/fraud/FraudClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+    <list default="true" id="62f2e9ea-129e-4539-85a1-1ebf67452e4f" name="Changes" comment=" 01-# injecting openfeigh# in project with creation new module client for reducing code of &quot;fraudcheckresponce&quot; class&#10;02-# use interface FraudClient with &quot;fraudcheckresponce.class&quot; in &quot;com.marri.client.fraud&quot; package.&#10;03-# in Customer class wee use dependency &quot;client&quot; for multiple use of &quot;fraudcheckresponce.class&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/main/java/com/marri/client/fraud/FraudClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/main/java/com/marri/client/fraud/FraudClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Customer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Customer/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Customer/src/main/java/com/marri/customer/CustomerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Customer/src/main/java/com/marri/customer/CustomerApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Customer/src/main/java/com/marri/customer/CustomerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Customer/src/main/java/com/marri/customer/CustomerConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Customer/src/main/java/com/marri/customer/CustomerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Customer/src/main/java/com/marri/customer/CustomerRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Customer/src/main/java/com/marri/customer/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Customer/src/main/java/com/marri/customer/CustomerController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Customer/src/main/java/com/marri/customer/CustomerServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/Customer/src/main/java/com/marri/customer/CustomerServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Customer/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Customer/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fraud/${project.build.directory}/classes/application.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fraud/${project.build.directory}/classes/banner.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fraud/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Fraud/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Customer/src/main/java/com/marri/customer/FraudCheckResponce.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fraud/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Fraud/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fraud/src/main/java/com/marri/fraud/FraudApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Fraud/src/main/java/com/marri/fraud/FraudApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fraud/src/main/java/com/marri/fraud/FraudCheckResponce.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/main/java/com/marri/client/fraud/FraudCheckResponce.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fraud/src/main/java/com/marri/fraud/FraudController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Fraud/src/main/java/com/marri/fraud/FraudController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -79,6 +79,9 @@
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.marri.customer" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.marri.client.fraud" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -200,8 +203,16 @@
       <workItem from="1676053132424" duration="1890000" />
       <workItem from="1676055992108" duration="4232000" />
       <workItem from="1676153831556" duration="2038000" />
-      <workItem from="1676567601553" duration="5166000" />
+      <workItem from="1676567601553" duration="10069000" />
     </task>
+    <task id="LOCAL-00001" summary=" 01-# injecting openfeigh# in project with creation new module client for reducing code of &quot;fraudcheckresponce&quot; class&#10;02-# use interface FraudClient with &quot;fraudcheckresponce.class&quot; in &quot;com.marri.client.fraud&quot; package.&#10;03-# in Customer class wee use dependency &quot;client&quot; for multiple use of &quot;fraudcheckresponce.class&quot;">
+      <created>1676574630129</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1676574630129</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -217,6 +228,12 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="OpenFeigh" />
+    <MESSAGE value="add #openfeigh# in project with creation new module client for reducing code of &quot;fraudcheckresponce&quot; class and use interfa" />
+    <MESSAGE value=" 01-# injecting openfeigh# in project with creation new module client for reducing code of &quot;fraudcheckresponce&quot; class&#10;02-# use interface FraudClient with &quot;fraudcheckresponce.class&quot; in &quot;com.marri.client.fraud&quot; package.&#10;03-# in Customer class wee use dependency &quot;client&quot; for multiple use of &quot;fraudcheckresponce.class&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value=" 01-# injecting openfeigh# in project with creation new module client for reducing code of &quot;fraudcheckresponce&quot; class&#10;02-# use interface FraudClient with &quot;fraudcheckresponce.class&quot; in &quot;com.marri.client.fraud&quot; package.&#10;03-# in Customer class wee use dependency &quot;client&quot; for multiple use of &quot;fraudcheckresponce.class&quot;" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

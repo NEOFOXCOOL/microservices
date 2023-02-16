@@ -1,14 +1,14 @@
 package com.marri.customer;
 
+import com.marri.client.fraud.FraudCheckResponce;
+import com.marri.client.fraud.FraudClient;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestTemplate;
-
 @Service
 @AllArgsConstructor
 public class CustomerServices {
     private final CustomerRepository customerRepository;
-    private final RestTemplate restTemplate;
+    private final FraudClient fraudClient;
 
     public void registerCustomer(CustomerRegisterRequest request){
         // Todo : check if email is valid
@@ -23,11 +23,8 @@ public class CustomerServices {
           customerRepository.saveAndFlush(customer);
         }
 
-        FraudCheckResponce fraudCheckResponce = restTemplate.getForObject(
-                "http://FRAUD/api/v1/fraud-check/{customerid}",
-                FraudCheckResponce.class,
-                customer.getId()
-        );
+        FraudCheckResponce fraudCheckResponce =
+                fraudClient.isFraudster(customer.getId());
 
         if(fraudCheckResponce.isFraudulent()){
             throw new IllegalStateException("isfraudster");
