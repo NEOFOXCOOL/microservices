@@ -2,6 +2,8 @@ package com.marri.customer;
 
 import com.marri.client.fraud.FraudCheckResponce;
 import com.marri.client.fraud.FraudClient;
+import com.marri.client.notification.NotificationClient;
+import com.marri.client.notification.NotificationRequest;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 @Service
@@ -9,6 +11,7 @@ import org.springframework.stereotype.Service;
 public class CustomerServices {
     private final CustomerRepository customerRepository;
     private final FraudClient fraudClient;
+    private final NotificationClient notificationClient;
 
     public void registerCustomer(CustomerRegisterRequest request){
         // Todo : check if email is valid
@@ -22,6 +25,14 @@ public class CustomerServices {
         if(customerRepository.findCustomerByEmail(request.email()).isEmpty()){
           customerRepository.saveAndFlush(customer);
         }
+
+        notificationClient.sendNotification(
+                new NotificationRequest(
+                        customer.getId(),
+                        customer.getEmail(),
+                        "Hello world, massage from customer by marri"
+                )
+        );
 
         FraudCheckResponce fraudCheckResponce =
                 fraudClient.isFraudster(customer.getId());
