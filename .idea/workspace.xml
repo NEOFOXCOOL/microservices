@@ -4,22 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="62f2e9ea-129e-4539-85a1-1ebf67452e4f" name="Changes" comment="Configure OpenFeigth with Client Module to balance between Fraud Copies">
-      <change afterPath="$PROJECT_DIR$/Client/src/main/java/com/marri/client/notification/NotificationClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/src/main/java/com/marri/client/notification/NotificationRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Notification/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Notification/src/main/java/com/marri/notification/Notification.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Notification/src/main/java/com/marri/notification/NotificationApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Notification/src/main/java/com/marri/notification/NotificationController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Notification/src/main/java/com/marri/notification/NotificationRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Notification/src/main/java/com/marri/notification/NotificationService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Notification/src/main/resources/application.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Notification/src/main/resources/banner.txt" afterDir="false" />
+    <list default="true" id="62f2e9ea-129e-4539-85a1-1ebf67452e4f" name="Changes" comment="add notification module">
+      <change afterPath="$PROJECT_DIR$/apigw/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apigw/src/main/java/com/marri/apigw/ApiGatewayApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apigw/src/main/resources/application.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apigw/src/main/resources/banner.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Customer/src/main/java/com/marri/customer/CustomerServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/Customer/src/main/java/com/marri/customer/CustomerServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fraud/src/main/java/com/marri/fraud/FraudApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Fraud/src/main/java/com/marri/fraud/FraudApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Customer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Customer/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Customer/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Customer/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eureka-Server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Eureka-Server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eureka-Server/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Eureka-Server/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fraud/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Fraud/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fraud/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Fraud/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notification/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Notification/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notification/src/main/java/com/marri/notification/Notification.java" beforeDir="false" afterPath="$PROJECT_DIR$/Notification/src/main/java/com/marri/notification/Notification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notification/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Notification/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notification/src/main/resources/banner.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Notification/src/main/resources/banner.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -31,8 +34,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="AnnotationType" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -69,11 +72,12 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "corretto-17",
+    "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "preferences.pluginManager",
-    "spring.configuration.checksum": "dbaff0dda32848e674e48d48f367d3e0"
+    "spring.configuration.checksum": "fbf02eda48ae0b374ba2f101121fda74"
   }
 }]]></component>
   <component name="ReactorSettings">
@@ -95,7 +99,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.NotificationApplication">
+  <component name="RunManager" selected="Spring Boot.ApiGatewayApplication">
     <configuration default="true" type="JetRunConfigurationType">
       <method v="2">
         <option name="Make" enabled="true" />
@@ -107,8 +111,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ApiGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="apigw" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.marri.apigw.ApiGatewayApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.marri.apigw.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CustomerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <option name="ACTIVE_PROFILES" />
       <module name="Customer" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.marri.customer.CustomerApplication" />
       <extension name="coverage">
@@ -153,16 +169,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FraudApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+    <configuration name="FraudAppliocation" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <option name="ACTIVE_PROFILES" />
       <module name="Fraud" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.marri.fraud.FraudApplication" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.marri.fraud.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -192,15 +202,16 @@
     <list>
       <item itemvalue="Docker.docker-compose.yaml: Compose Deployment" />
       <item itemvalue="Spring Boot.FraudApplication 2" />
+      <item itemvalue="Spring Boot.FraudAppliocation" />
+      <item itemvalue="Spring Boot.ApiGatewayApplication" />
       <item itemvalue="Spring Boot.NotificationApplication" />
       <item itemvalue="Spring Boot.CustomerApplication" />
       <item itemvalue="Spring Boot.EurekaServerApplication" />
-      <item itemvalue="Spring Boot.FraudApplication" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.ApiGatewayApplication" />
         <item itemvalue="Spring Boot.NotificationApplication" />
-        <item itemvalue="Spring Boot.FraudApplication" />
         <item itemvalue="Spring Boot.EurekaServerApplication" />
         <item itemvalue="Spring Boot.CustomerApplication" />
         <item itemvalue="Docker.docker-compose.yaml: Compose Deployment" />
@@ -223,7 +234,12 @@
       <workItem from="1676055992108" duration="4232000" />
       <workItem from="1676153831556" duration="2038000" />
       <workItem from="1676567601553" duration="10410000" />
-      <workItem from="1676610405018" duration="5595000" />
+      <workItem from="1676610405018" duration="5896000" />
+      <workItem from="1676656288149" duration="3284000" />
+      <workItem from="1676714553126" duration="3289000" />
+      <workItem from="1676717923029" duration="5048000" />
+      <workItem from="1676748742950" duration="22000" />
+      <workItem from="1676749354480" duration="388000" />
     </task>
     <task id="LOCAL-00001" summary=" 01-# injecting openfeigh# in project with creation new module client for reducing code of &quot;fraudcheckresponce&quot; class&#10;02-# use interface FraudClient with &quot;fraudcheckresponce.class&quot; in &quot;com.marri.client.fraud&quot; package.&#10;03-# in Customer class wee use dependency &quot;client&quot; for multiple use of &quot;fraudcheckresponce.class&quot;">
       <created>1676574630129</created>
@@ -246,7 +262,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676610484376</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="add notification module">
+      <created>1676617065338</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1676617065338</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -268,7 +291,8 @@
     <MESSAGE value="add #openfeigh# in project with creation new module client for reducing code of &quot;fraudcheckresponce&quot; class and use interfa" />
     <MESSAGE value=" 01-# injecting openfeigh# in project with creation new module client for reducing code of &quot;fraudcheckresponce&quot; class&#10;02-# use interface FraudClient with &quot;fraudcheckresponce.class&quot; in &quot;com.marri.client.fraud&quot; package.&#10;03-# in Customer class wee use dependency &quot;client&quot; for multiple use of &quot;fraudcheckresponce.class&quot;" />
     <MESSAGE value="Configure OpenFeigth with Client Module to balance between Fraud Copies" />
-    <option name="LAST_COMMIT_MESSAGE" value="Configure OpenFeigth with Client Module to balance between Fraud Copies" />
+    <MESSAGE value="add notification module" />
+    <option name="LAST_COMMIT_MESSAGE" value="add notification module" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

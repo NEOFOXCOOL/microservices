@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Eureka-Server" />
+        <module name="apigw" />
         <module name="Fraud" />
         <module name="Client" />
         <module name="Customer" />
