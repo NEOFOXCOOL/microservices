@@ -4,24 +4,52 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="62f2e9ea-129e-4539-85a1-1ebf67452e4f" name="Changes" comment="add notification module">
-      <change afterPath="$PROJECT_DIR$/apigw/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apigw/src/main/java/com/marri/apigw/ApiGatewayApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apigw/src/main/resources/application.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apigw/src/main/resources/banner.txt" afterDir="false" />
+    <list default="true" id="62f2e9ea-129e-4539-85a1-1ebf67452e4f" name="Changes" comment="RabbitMQ addition.&#10;&#10;in this version of project i adding the topic of Queue with RabbitMQ in notification module, all configuration has been running with succeed!&#10;updating in 20-02-2023 between 18:00 at 22:20.&#10;with AmigosCode courses Microservices.">
+      <change afterPath="$PROJECT_DIR$/amqp/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/amqp/src/main/java/com/marri/amqp/RabbitMQMessageProducer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/amqp/src/main/java/com/marri/amqp/RabbitmqConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification/src/main/java/com/marri/notification/NotificationConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification/src/main/java/com/marri/notification/rabbitmq/NotificationConsumer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Customer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Customer/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Customer/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Customer/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eureka-Server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Eureka-Server/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eureka-Server/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Eureka-Server/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fraud/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Fraud/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fraud/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Fraud/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Notification/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Notification/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Notification/src/main/java/com/marri/notification/Notification.java" beforeDir="false" afterPath="$PROJECT_DIR$/Notification/src/main/java/com/marri/notification/Notification.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Notification/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Notification/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Notification/src/main/resources/banner.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Notification/src/main/resources/banner.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/client/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/main/java/com/marri/client/fraud/FraudCheckResponce.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/marri/client/fraud/FraudCheckResponce.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/main/java/com/marri/client/fraud/FraudClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/marri/client/fraud/FraudClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/main/java/com/marri/client/notification/NotificationClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/marri/client/notification/NotificationClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/main/java/com/marri/client/notification/NotificationRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/marri/client/notification/NotificationRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Customer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/customer/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Customer/src/main/java/com/marri/customer/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer/src/main/java/com/marri/customer/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Customer/src/main/java/com/marri/customer/CustomerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer/src/main/java/com/marri/customer/CustomerApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Customer/src/main/java/com/marri/customer/CustomerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer/src/main/java/com/marri/customer/CustomerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Customer/src/main/java/com/marri/customer/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer/src/main/java/com/marri/customer/CustomerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Customer/src/main/java/com/marri/customer/CustomerRegisterRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer/src/main/java/com/marri/customer/CustomerRegisterRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Customer/src/main/java/com/marri/customer/CustomerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer/src/main/java/com/marri/customer/CustomerRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Customer/src/main/java/com/marri/customer/CustomerServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer/src/main/java/com/marri/customer/CustomerServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Customer/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/customer/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Customer/src/main/resources/banner.txt" beforeDir="false" afterPath="$PROJECT_DIR$/customer/src/main/resources/banner.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eureka-Server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eureka-Server/src/main/java/com/marri/eurekaserver/EurekaServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-server/src/main/java/com/marri/eurekaserver/EurekaServerApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eureka-Server/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-server/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eureka-Server/src/main/resources/banner.txt" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-server/src/main/resources/banner.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fraud/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/fraud/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fraud/src/main/java/com/marri/fraud/FraudApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/fraud/src/main/java/com/marri/fraud/FraudApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fraud/src/main/java/com/marri/fraud/FraudCheckHistory.java" beforeDir="false" afterPath="$PROJECT_DIR$/fraud/src/main/java/com/marri/fraud/FraudCheckHistory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fraud/src/main/java/com/marri/fraud/FraudController.java" beforeDir="false" afterPath="$PROJECT_DIR$/fraud/src/main/java/com/marri/fraud/FraudController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fraud/src/main/java/com/marri/fraud/FraudRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/fraud/src/main/java/com/marri/fraud/FraudRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fraud/src/main/java/com/marri/fraud/FraudServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/fraud/src/main/java/com/marri/fraud/FraudServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fraud/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/fraud/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fraud/src/main/resources/banner.txt" beforeDir="false" afterPath="$PROJECT_DIR$/fraud/src/main/resources/banner.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notification/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/notification/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notification/src/main/java/com/marri/notification/Notification.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification/src/main/java/com/marri/notification/Notification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notification/src/main/java/com/marri/notification/NotificationApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification/src/main/java/com/marri/notification/NotificationApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notification/src/main/java/com/marri/notification/NotificationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification/src/main/java/com/marri/notification/NotificationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notification/src/main/java/com/marri/notification/NotificationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification/src/main/java/com/marri/notification/NotificationRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notification/src/main/java/com/marri/notification/NotificationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification/src/main/java/com/marri/notification/NotificationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notification/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/notification/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notification/src/main/resources/banner.txt" beforeDir="false" afterPath="$PROJECT_DIR$/notification/src/main/resources/banner.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apigw/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/apigw/src/main/resources/application.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
@@ -77,7 +105,7 @@
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "preferences.pluginManager",
-    "spring.configuration.checksum": "fbf02eda48ae0b374ba2f101121fda74"
+    "spring.configuration.checksum": "8c279eca2e08df95e1fb2c56d2d2ced5"
   }
 }]]></component>
   <component name="ReactorSettings">
@@ -99,7 +127,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.ApiGatewayApplication">
+  <component name="RunManager" selected="Spring Boot.NotificationApplication">
     <configuration default="true" type="JetRunConfigurationType">
       <method v="2">
         <option name="Make" enabled="true" />
@@ -125,7 +153,7 @@
       </method>
     </configuration>
     <configuration name="CustomerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="Customer" />
+      <module name="customer" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.marri.customer.CustomerApplication" />
       <extension name="coverage">
         <pattern>
@@ -139,7 +167,7 @@
     </configuration>
     <configuration name="EurekaServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <option name="ACTIVE_PROFILES" />
-      <module name="Eureka-Server" />
+      <module name="eureka-server" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.marri.eurekaserver.EurekaServerApplication" />
       <extension name="coverage">
         <pattern>
@@ -153,7 +181,7 @@
     </configuration>
     <configuration name="FraudApplication 2" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <option name="ACTIVE_PROFILES" />
-      <module name="Fraud" />
+      <module name="fraud" />
       <option name="PROGRAM_PARAMETERS" value="--server.port=8085" />
       <selectedOptions>
         <option name="spring.boot.profiles" visible="false" />
@@ -171,14 +199,14 @@
     </configuration>
     <configuration name="FraudAppliocation" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <option name="ACTIVE_PROFILES" />
-      <module name="Fraud" />
+      <module name="fraud" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.marri.fraud.FraudApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="NotificationApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="Notification" />
+      <module name="notification" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.marri.notification.NotificationApplication" />
       <extension name="coverage">
         <pattern>
@@ -190,17 +218,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="docker-compose.yaml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+    <configuration name="docker-compose.yaml[rabbitmq, postgres, pgadmin, zipkin]: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
           <option name="envFilePath" value="" />
+          <option name="services">
+            <list>
+              <option value="rabbitmq" />
+              <option value="postgres" />
+              <option value="pgadmin" />
+              <option value="zipkin" />
+            </list>
+          </option>
           <option name="sourceFilePath" value="docker-compose.yaml" />
         </settings>
       </deployment>
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Docker.docker-compose.yaml: Compose Deployment" />
+      <item itemvalue="Docker.docker-compose.yaml[rabbitmq, postgres, pgadmin, zipkin]: Compose Deployment" />
       <item itemvalue="Spring Boot.FraudApplication 2" />
       <item itemvalue="Spring Boot.FraudAppliocation" />
       <item itemvalue="Spring Boot.ApiGatewayApplication" />
@@ -210,11 +246,11 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.ApiGatewayApplication" />
         <item itemvalue="Spring Boot.NotificationApplication" />
-        <item itemvalue="Spring Boot.EurekaServerApplication" />
         <item itemvalue="Spring Boot.CustomerApplication" />
-        <item itemvalue="Docker.docker-compose.yaml: Compose Deployment" />
+        <item itemvalue="Spring Boot.ApiGatewayApplication" />
+        <item itemvalue="Spring Boot.EurekaServerApplication" />
+        <item itemvalue="Docker.docker-compose.yaml[rabbitmq, postgres, pgadmin, zipkin]: Compose Deployment" />
       </list>
     </recent_temporary>
   </component>
@@ -239,7 +275,9 @@
       <workItem from="1676714553126" duration="3289000" />
       <workItem from="1676717923029" duration="5048000" />
       <workItem from="1676748742950" duration="22000" />
-      <workItem from="1676749354480" duration="388000" />
+      <workItem from="1676749354480" duration="4982000" />
+      <workItem from="1676837617322" duration="1558000" />
+      <workItem from="1676914909508" duration="11727000" />
     </task>
     <task id="LOCAL-00001" summary=" 01-# injecting openfeigh# in project with creation new module client for reducing code of &quot;fraudcheckresponce&quot; class&#10;02-# use interface FraudClient with &quot;fraudcheckresponce.class&quot; in &quot;com.marri.client.fraud&quot; package.&#10;03-# in Customer class wee use dependency &quot;client&quot; for multiple use of &quot;fraudcheckresponce.class&quot;">
       <created>1676574630129</created>
@@ -269,7 +307,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676617065338</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="add gateway">
+      <created>1676750843879</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1676750843879</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -292,7 +337,9 @@
     <MESSAGE value=" 01-# injecting openfeigh# in project with creation new module client for reducing code of &quot;fraudcheckresponce&quot; class&#10;02-# use interface FraudClient with &quot;fraudcheckresponce.class&quot; in &quot;com.marri.client.fraud&quot; package.&#10;03-# in Customer class wee use dependency &quot;client&quot; for multiple use of &quot;fraudcheckresponce.class&quot;" />
     <MESSAGE value="Configure OpenFeigth with Client Module to balance between Fraud Copies" />
     <MESSAGE value="add notification module" />
-    <option name="LAST_COMMIT_MESSAGE" value="add notification module" />
+    <MESSAGE value="add gateway" />
+    <MESSAGE value="RabbitMQ addition.&#10;&#10;in this version of project i adding the topic of Queue with RabbitMQ in notification module, all configuration has been running with succeed!&#10;updating in 20-02-2023 between 18:00 at 22:20.&#10;with AmigosCode courses Microservices." />
+    <option name="LAST_COMMIT_MESSAGE" value="RabbitMQ addition.&#10;&#10;in this version of project i adding the topic of Queue with RabbitMQ in notification module, all configuration has been running with succeed!&#10;updating in 20-02-2023 between 18:00 at 22:20.&#10;with AmigosCode courses Microservices." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

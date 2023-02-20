@@ -1,5 +1,6 @@
 package com.marri.customer;
 
+import com.marri.amqp.RabbitMQMessageProducer;
 import com.marri.client.fraud.FraudCheckResponce;
 import com.marri.client.fraud.FraudClient;
 import com.marri.client.notification.NotificationClient;
@@ -11,12 +12,9 @@ import org.springframework.stereotype.Service;
 public class CustomerServices {
     private final CustomerRepository customerRepository;
     private final FraudClient fraudClient;
-    private final NotificationClient notificationClient;
-
+    private final RabbitMQMessageProducer rabbitMQMessageProducer;
     public void registerCustomer(CustomerRegisterRequest request){
-        // Todo : check if email is valid
-        // Todo : Check if email note taken
-        // Todo : store customer in DB
+
         Customer customer = Customer.builder()
                 .firstName(request.firstName())
                 .lastName(request.lastName())
@@ -26,12 +24,16 @@ public class CustomerServices {
           customerRepository.saveAndFlush(customer);
         }
 
-        notificationClient.sendNotification(
-                new NotificationRequest(
-                        customer.getId(),
-                        customer.getEmail(),
-                        "Hello world, massage from customer by marri"
-                )
+        NotificationRequest notificationRequest = new NotificationRequest(
+                customer.getId(),
+                customer.getEmail(),
+                "Hello world, massage from customer by marri"
+        );
+
+        rabbitMQMessageProducer.publish(
+                notificationRequest,
+                "internal.exchange",
+                "internal.notification.routing-key"
         );
 
         FraudCheckResponce fraudCheckResponce =
