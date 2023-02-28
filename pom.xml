@@ -8,12 +8,13 @@
     <artifactId>MicroServices</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+
     <modules>
-        <module>Customer</module>
-        <module>Fraud</module>
-        <module>Eureka-Server</module>
-        <module>Client</module>
-        <module>Notification</module>
+        <module>customer</module>
+        <module>fraud</module>
+        <module>eureka-server</module>
+        <module>client</module>
+        <module>notification</module>
         <module>apigw</module>
         <module>amqp</module>
     </modules>
@@ -25,6 +26,8 @@
         <spring-boot-maven-plugin-version>2.5.7</spring-boot-maven-plugin-version>
         <spring-cloud-dependency-version>2020.0.6</spring-cloud-dependency-version>
         <spring-boot-dependency-version>2.5.7</spring-boot-dependency-version>
+        <jib-maven-plugin>3.1.4</jib-maven-plugin>
+        <image>mariplusultra/${project.artifactId}:${project.version}</image>
     </properties>
 
     <dependencyManagement>
@@ -44,19 +47,22 @@
                 <scope>import</scope>
                 <type>pom</type>
             </dependency>
+
         </dependencies>
     </dependencyManagement>
 
     <dependencies>
 
         <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-openfeign</artifactId>
-        </dependency>
-        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+        </dependency>
+
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
@@ -70,9 +76,64 @@
                     <groupId>org.springframework.boot</groupId>
                     <artifactId>spring-boot-maven-plugin</artifactId>
                     <version>${spring-boot-maven-plugin-version}</version>
+                    <executions>
+                        <execution>
+                            <goals>
+                                <goal>repackage</goal>
+                            </goals>
+                        </execution>
+                    </executions>
                 </plugin>
+
+                <plugin>
+                    <groupId>com.google.cloud.tools</groupId>
+                    <artifactId>jib-maven-plugin</artifactId>
+                    <version>3.1.4</version>
+                    <configuration>
+                        <from>
+<!--                            <image>eclipse-temurin:17-alpine</image>-->
+<!--                            <image>eclipse-temurin:17@sha256:72bd522b352456027828ad979e15ee93b37ef3b38ec676556c6626d5fc602ce9</image>-->
+<!--                            <image>eclipse-temurin:17.0.6_10-jre@sha256:592f2d372afeb13bc3c5a28e49c7ca6b5e5688e767cb0b9e21a70caaacfc4cec</image>-->
+<!--                            <image>openjdk:20-ea-17-oraclelinux8</image>-->
+                            <image>openjdk:20-ea-17-oraclelinux8@sha256:3669b75f66492d825ec091152c613db9f7f33659df88b858dfac623c3a6033aa</image>
+                            <platforms>
+                                <platform>
+                                    <architecture>arm64</architecture>
+                                    <os>linux</os>
+                                </platform>
+                                <platform>
+                                    <architecture>amd64</architecture>
+                                    <os>linux</os>
+                                </platform>
+                            </platforms>
+                        </from>
+                        <to>latest</to>
+                    </configuration>
+                    <executions>
+                        <execution>
+                            <phase>package</phase>
+                            <goals>
+                                <goal>build</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+
             </plugins>
         </pluginManagement>
+
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.0</version>
+                <configuration>
+                    <source>17</source>
+                    <target>17</target>
+                </configuration>
+            </plugin>
+        </plugins>
+
     </build>
 
 </project>

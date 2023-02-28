@@ -15,27 +15,31 @@ public class CustomerServices {
     private final RabbitMQMessageProducer rabbitMQMessageProducer;
     public void registerCustomer(CustomerRegisterRequest request){
 
+        //TODO: Build Customer
         Customer customer = Customer.builder()
                 .firstName(request.firstName())
                 .lastName(request.lastName())
                 .email(request.email())
                 .build();
+        //TODO: Save Customer
         if(customerRepository.findCustomerByEmail(request.email()).isEmpty()){
           customerRepository.saveAndFlush(customer);
         }
-
+        //TODO: Generat new Notification
         NotificationRequest notificationRequest = new NotificationRequest(
                 customer.getId(),
                 customer.getEmail(),
-                "Hello world, massage from customer by marri"
+                String.format("Hi %s, Welcome to Marri Application",customer.getFirstName())
         );
 
+        //TODO: send notification to Queue
         rabbitMQMessageProducer.publish(
                 notificationRequest,
                 "internal.exchange",
                 "internal.notification.routing-key"
         );
 
+        //TODO: Check if customer is fraudster
         FraudCheckResponce fraudCheckResponce =
                 fraudClient.isFraudster(customer.getId());
 

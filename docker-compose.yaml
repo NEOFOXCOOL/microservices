@@ -2,18 +2,96 @@ version: '3.5'
 
 services:
 
+
+
+  fraud:
+    image: mariplusultra/fraud:1.0-SNAPSHOT
+    container_name: fraud
+    ports:
+      - "8081:8081"
+    environment:
+      - SPRING_PROFILES_ACTIVE = docker
+    networks:
+      - postgres
+      - spring
+    depends_on:
+      - eureka-server
+      - postgres
+      - zipkin
+      - rabbitmq
+
+  customer:
+    image: mariplusultra/customer:1.0-SNAPSHOT
+    container_name: customer
+    ports:
+      - "8080:8080"
+    networks:
+      - postgres
+      - spring
+    environment:
+      - SPRING_PROFILES_ACTIVE = docker
+    depends_on:
+      - eureka-server
+      - zipkin
+      - postgres
+      - rabbitmq
+
+  notification:
+    image: mariplusultra/notification:1.0-SNAPSHOT
+    container_name: notification
+    ports:
+      - "8086:8086"
+    networks:
+      - postgres
+      - spring
+    environment:
+      - SPRING_PROFILES_ACTIVE = docker
+    depends_on:
+      - zipkin
+      - rabbitmq
+      - postgres
+      - eureka-server
+
+  eureka-server:
+    image: mariplusultra/eureka-server:1.0-SNAPSHOT
+    container_name: eureka-server
+    ports:
+      - "8761:8761"
+    networks:
+      - spring
+    environment:
+      - SPRING_PROFILES_ACTIVE = docker
+    depends_on:
+      - zipkin
+
+  apigw:
+    image: mariplusultra/apigw:1.0-SNAPSHOT
+    ports:
+      - "8083:8083"
+    networks:
+      - spring
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+    depends_on:
+      - zipkin
+      - eureka-server
+
   rabbitmq:
     image: rabbitmq:3.9.11-management-alpine
     container_name: rabbitmq
     ports:
       - "5672:5672"
       - "15672:15672"
+    networks:
+      - spring
 
   zipkin:
     image: openzipkin/zipkin
     container_name: zipkin
     ports:
       - "9411:9411"
+    networks:
+      - spring
 
   postgres:
     container_name: postgres
@@ -47,8 +125,12 @@ services:
     restart: unless-stopped
 
 
+
+
 networks:
   postgres:
+    driver: bridge
+  spring:
     driver: bridge
 
 volumes:
