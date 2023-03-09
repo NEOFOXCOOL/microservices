@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.marri</groupId>
-    <artifactId>MicroServices</artifactId>
+    <artifactId>MarriCode</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
 
@@ -26,7 +26,7 @@
         <spring-boot-maven-plugin-version>2.5.7</spring-boot-maven-plugin-version>
         <spring-cloud-dependency-version>2020.0.6</spring-cloud-dependency-version>
         <spring-boot-dependency-version>2.5.7</spring-boot-dependency-version>
-        <jib-maven-plugin>3.1.4</jib-maven-plugin>
+        <jib-maven-plugin>3.3.1</jib-maven-plugin>
         <image>mariplusultra/${project.artifactId}:${project.version}</image>
     </properties>
 
@@ -88,14 +88,10 @@
                 <plugin>
                     <groupId>com.google.cloud.tools</groupId>
                     <artifactId>jib-maven-plugin</artifactId>
-                    <version>3.1.4</version>
+                    <version>${jib-maven-plugin}</version>
                     <configuration>
                         <from>
-<!--                            <image>eclipse-temurin:17-alpine</image>-->
-<!--                            <image>eclipse-temurin:17@sha256:72bd522b352456027828ad979e15ee93b37ef3b38ec676556c6626d5fc602ce9</image>-->
-<!--                            <image>eclipse-temurin:17.0.6_10-jre@sha256:592f2d372afeb13bc3c5a28e49c7ca6b5e5688e767cb0b9e21a70caaacfc4cec</image>-->
-<!--                            <image>openjdk:20-ea-17-oraclelinux8</image>-->
-                            <image>openjdk:20-ea-17-oraclelinux8@sha256:3669b75f66492d825ec091152c613db9f7f33659df88b858dfac623c3a6033aa</image>
+                            <image>eclipse-temurin:17@sha256:2b47a8ea946ce1e5365a1562414ed576e378b7b670cadff3fb98ebecf2890cdc</image>
                             <platforms>
                                 <platform>
                                     <architecture>arm64</architecture>
@@ -107,7 +103,11 @@
                                 </platform>
                             </platforms>
                         </from>
-                        <to>latest</to>
+                        <to>
+                            <tags>
+                                <tag>latest</tag>
+                            </tags>
+                        </to>
                     </configuration>
                     <executions>
                         <execution>

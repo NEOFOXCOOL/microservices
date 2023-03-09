@@ -1,13 +1,12 @@
 server:
-  port: 8080
+  port: 8086
 spring:
-
   application:
-    name: customer
+    name: notification
   datasource:
     username: 'neofoxcool@gmail.com'
     password: '1993'
-    url: jdbc:postgresql://postgres:5432/customer
+    url: jdbc:postgresql://localhost:5432/notification
   jpa:
     hibernate:
       ddl-auto: update
@@ -16,9 +15,8 @@ spring:
         dialect: org.hibernate.dialect.PostgreSQLDialect
         format_sql: true
     show-sql: true
-
   zipkin:
-    base-url: "http://zipkin:9411"
+    base-url: http://localhost:9411
   rabbitmq:
     addresses: rabbitmq:5672
 
@@ -27,8 +25,12 @@ eureka:
     fetch-registry: true
     register-with-eureka: true
     service-url:
-      default-zone:  'http://eureka-server:8761/eureka'
+      default-zone:  http://localhost:8761/eureka
 
-
-
-
+rabbitmq:
+  exchanges:
+    internal: internal.exchange
+  queues:
+    notification: notification.queue
+  routing-keys:
+    internal-notification: internal.notification.routing-key

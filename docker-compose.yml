@@ -2,15 +2,13 @@ version: '3.5'
 
 services:
 
-
-
   fraud:
-    image: mariplusultra/fraud:1.0-SNAPSHOT
     container_name: fraud
+    image: mariplusultra/fraud:latest
     ports:
       - "8081:8081"
     environment:
-      - SPRING_PROFILES_ACTIVE = docker
+      - SPRING_PROFILES_ACTIVE=docker
     networks:
       - postgres
       - spring
@@ -21,15 +19,15 @@ services:
       - rabbitmq
 
   customer:
-    image: mariplusultra/customer:1.0-SNAPSHOT
     container_name: customer
+    image: mariplusultra/customer:latest
     ports:
       - "8080:8080"
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
     networks:
       - postgres
       - spring
-    environment:
-      - SPRING_PROFILES_ACTIVE = docker
     depends_on:
       - eureka-server
       - zipkin
@@ -37,15 +35,15 @@ services:
       - rabbitmq
 
   notification:
-    image: mariplusultra/notification:1.0-SNAPSHOT
     container_name: notification
+    image: mariplusultra/notification:latest
     ports:
       - "8086:8086"
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
     networks:
       - postgres
       - spring
-    environment:
-      - SPRING_PROFILES_ACTIVE = docker
     depends_on:
       - zipkin
       - rabbitmq
@@ -53,32 +51,33 @@ services:
       - eureka-server
 
   eureka-server:
-    image: mariplusultra/eureka-server:1.0-SNAPSHOT
     container_name: eureka-server
+    image: mariplusultra/eureka-server:latest
     ports:
       - "8761:8761"
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
     networks:
       - spring
-    environment:
-      - SPRING_PROFILES_ACTIVE = docker
     depends_on:
       - zipkin
 
   apigw:
-    image: mariplusultra/apigw:1.0-SNAPSHOT
+    container_name: apigw
+    image: mariplusultra/apigw:latest
     ports:
-      - "8083:8083"
-    networks:
-      - spring
+      - "8090:8090"
     environment:
       - SPRING_PROFILES_ACTIVE=docker
+    networks:
+      - spring
     depends_on:
-      - zipkin
       - eureka-server
+      - zipkin
 
   rabbitmq:
-    image: rabbitmq:3.9.11-management-alpine
     container_name: rabbitmq
+    image: rabbitmq:3.9.11-management-alpine
     ports:
       - "5672:5672"
       - "15672:15672"
@@ -86,8 +85,8 @@ services:
       - spring
 
   zipkin:
-    image: openzipkin/zipkin
     container_name: zipkin
+    image: openzipkin/zipkin
     ports:
       - "9411:9411"
     networks:
@@ -123,9 +122,6 @@ services:
     networks:
       - postgres
     restart: unless-stopped
-
-
-
 
 networks:
   postgres:
