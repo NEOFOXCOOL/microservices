@@ -27,7 +27,7 @@
         <spring-cloud-dependency-version>2020.0.6</spring-cloud-dependency-version>
         <spring-boot-dependency-version>2.5.7</spring-boot-dependency-version>
         <jib-maven-plugin>3.3.1</jib-maven-plugin>
-        <image>mariplusultra/${project.artifactId}:${project.version}</image>
+        <image>marricode/${project.artifactId}:${project.version}</image>
     </properties>
 
     <dependencyManagement>

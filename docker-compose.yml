@@ -4,7 +4,7 @@ services:
 
   fraud:
     container_name: fraud
-    image: mariplusultra/fraud:latest
+    image: marricode/fraud:latest
     ports:
       - "8081:8081"
     environment:
@@ -20,7 +20,7 @@ services:
 
   customer:
     container_name: customer
-    image: mariplusultra/customer:latest
+    image: marricode/customer:latest
     ports:
       - "8080:8080"
     environment:
@@ -36,7 +36,7 @@ services:
 
   notification:
     container_name: notification
-    image: mariplusultra/notification:latest
+    image: marricode/notification:latest
     ports:
       - "8086:8086"
     environment:
@@ -52,7 +52,7 @@ services:
 
   eureka-server:
     container_name: eureka-server
-    image: mariplusultra/eureka-server:latest
+    image: marricode/eureka-server:latest
     ports:
       - "8761:8761"
     environment:
@@ -64,7 +64,7 @@ services:
 
   apigw:
     container_name: apigw
-    image: mariplusultra/apigw:latest
+    image: marricode/apigw:latest
     ports:
       - "8090:8090"
     environment:
