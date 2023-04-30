@@ -1,5 +1,6 @@
 package com.marri.notification;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import org.springframework.amqp.core.Binding;
 import org.springframework.amqp.core.BindingBuilder;
@@ -11,7 +12,10 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 @Getter
+@AllArgsConstructor
 public class NotificationConfig {
+
+    NotificationRepository notificationRepository;
 
     @Value("${rabbitmq.exchanges.internal}")
     private String internalExchange;
@@ -39,5 +43,4 @@ public class NotificationConfig {
                 .to(internalExchange())
                 .with(this.internalNotificationRoutingKey);
     }
-
 }

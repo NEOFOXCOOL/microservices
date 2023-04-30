@@ -2,10 +2,9 @@ package com.marri.customer;
 
 import lombok.AllArgsConstructor;
 import org.springframework.cloud.openfeign.EnableFeignClients;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @AllArgsConstructor
@@ -13,8 +12,13 @@ import org.springframework.web.bind.annotation.RestController;
 public class CustomerController {
     private final CustomerServices customerServices;
 
-    @PostMapping
+    @PostMapping(path = "addcustomer")
     public void registerCustomer(@RequestBody CustomerRegisterRequest request){
         customerServices.registerCustomer(request);
+    }
+
+    @GetMapping(path = "listCustomers")
+    public List<Customer> allCustomers(){
+        return customerServices.showCustomers();
     }
 }

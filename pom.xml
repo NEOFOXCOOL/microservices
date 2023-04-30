@@ -28,6 +28,7 @@
         <spring-boot-dependency-version>2.5.7</spring-boot-dependency-version>
         <jib-maven-plugin>3.3.1</jib-maven-plugin>
         <image>marricode/${project.artifactId}:${project.version}</image>
+        <module-version>1.2</module-version>
     </properties>
 
     <dependencyManagement>
@@ -105,7 +106,7 @@
                         </from>
                         <to>
                             <tags>
-                                <tag>latest</tag>
+                                <tag>${module-version}</tag>
                             </tags>
                         </to>
                     </configuration>
@@ -126,7 +127,6 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.0</version>
                 <configuration>
                     <source>17</source>
                     <target>17</target>

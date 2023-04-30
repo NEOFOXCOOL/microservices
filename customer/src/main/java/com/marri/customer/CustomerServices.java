@@ -7,6 +7,9 @@ import com.marri.client.notification.NotificationClient;
 import com.marri.client.notification.NotificationRequest;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
+
 @Service
 @AllArgsConstructor
 public class CustomerServices {
@@ -46,6 +49,10 @@ public class CustomerServices {
         if(fraudCheckResponce.isFraudulent()){
             throw new IllegalStateException("isfraudster");
         }
+    }
+
+    public List<Customer> showCustomers(){
+        return customerRepository.findAll();
     }
 
 }
