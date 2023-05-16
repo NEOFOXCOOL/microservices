@@ -1,54 +1,51 @@
 version: '3.5'
 services:
-#
-#  fraud:
-#    container_name: fraud
-#    image: marricode/fraud:1.2
-#    ports:
-#      - "8081:8081"
-#    environment:
-#      - SPRING_PROFILES_ACTIVE=docker
-#    networks:
-#      - postgres
-#      - spring
-#    depends_on:
-#      - eureka-server
-#      - postgres
-#      - zipkin
-#      - rabbitmq
-#
-#  customer:
-#    container_name: customer
-#    image: marricode/customer:1.2
-#    ports:
-#      - "8080:8080"
-#    environment:
-#      - SPRING_PROFILES_ACTIVE=docker
-#    networks:
-#      - postgres
-#      - spring
-#    depends_on:
-#      - eureka-server
-#      - zipkin
-#      - postgres
-#      - rabbitmq
-#
-#  notification:
-#    container_name: notification
-#    image: marricode/notification:1.2
-#    ports:
-#      - "8086:8086"
-#    environment:
-#      - SPRING_PROFILES_ACTIVE=docker
-#    networks:
-#      - postgres
-#      - spring
-#    depends_on:
-#      - zipkin
-#      - rabbitmq
-#      - postgres
-#      - eureka-server
-#
+
+  fraud:
+    container_name: fraud
+    image: marricode/fraud:1.2
+    ports:
+      - "8081:8081"
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+    networks:
+      - postgres
+      - spring
+    depends_on:
+      - postgres
+      - zipkin
+      - rabbitmq
+
+  customer:
+    container_name: customer
+    image: marricode/customer:1.2
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+    networks:
+      - postgres
+      - spring
+    depends_on:
+      - zipkin
+      - postgres
+      - rabbitmq
+
+  notification:
+    container_name: notification
+    image: marricode/notification:1.2
+    ports:
+      - "8086:8086"
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+    networks:
+      - postgres
+      - spring
+    depends_on:
+      - zipkin
+      - rabbitmq
+      - postgres
+
 #  eureka-server:
 #    container_name: eureka-server
 #    image: marricode/eureka-server:1.2
@@ -60,19 +57,19 @@ services:
 #      - spring
 #    depends_on:
 #      - zipkin
-#
-#  apigw:
-#    container_name: apigw
-#    image: marricode/apigw:1.2
-#    ports:
-#      - "8090:8090"
-#    environment:
-#      - SPRING_PROFILES_ACTIVE=docker
-#    networks:
-#      - spring
-#    depends_on:
-#      - eureka-server
-#      - zipkin
+
+  apigw:
+    container_name: apigw
+    image: marricode/apigw:1.2
+    ports:
+      - "8090:8090"
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+    networks:
+      - spring
+    depends_on:
+      - eureka-server
+      - zipkin
 
   rabbitmq:
     container_name: rabbitmq

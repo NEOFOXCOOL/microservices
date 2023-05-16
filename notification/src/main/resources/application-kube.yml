@@ -6,27 +6,30 @@ spring:
   datasource:
     username: 'neofoxcool@gmail.com'
     password: '1993'
-    url: jdbc:postgresql://192.168.99.100:5432/notification
+    url: jdbc:postgresql://postgres:5432/notification
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: validate
     properties:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
         format_sql: true
     show-sql: true
   zipkin:
-    base-url: http://192.168.99.100:9411
+    base-url: http://zipkin:9411/
   rabbitmq:
-    addresses: 192.168.99.100:5672
+    addresses: rabbitmq:5672
 
-eureka:
-  client:
-    fetch-registry: true
-    register-with-eureka: true
-    service-url:
-      default-zone:  http://localhost:8761/eureka
-    enabled: false
+#eureka:
+#  host: eureka-server
+#  instance:
+#    prefer-ip-address: true
+#  client:
+#    fetch-registry: true
+#    register-with-eureka: true
+#    service-url:
+#      defaultZone: http://eureka-server:8761/eureka/
+#    enabled: true
 
 rabbitmq:
   exchanges:

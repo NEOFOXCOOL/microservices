@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pgadmin
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: pgadmin
+  template:
+    metadata:
+      labels:
+        app: pgadmin
+    spec:
+      containers:
+        - env:
+            - name: PGADMIN_DEFAULT_EMAIL
+              value: neofoxcool@gmail.com
+            - name: PGADMIN_DEFAULT_PASSWORD
+              value: '1993'
+            - name: PGADMIN_PORT
+              value: "80"
+          image: dpage/pgadmin4
+          imagePullPolicy: IfNotPresent
+          name: pgadmin
+          ports:
+            - containerPort: 5050
+          resources:
+            limits:
+              memory: 1024Mi
